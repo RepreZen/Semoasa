@@ -48,10 +48,16 @@ SEMOASA aims to meet the following goals, to the extent practical:
                 * **(other)** - other properties, TBD 
             * **schema** (type: Schema Object or reference) - an OAS 3.0-compliant Schema Object describing the expected value of the extension property. May be specified inline, or may be a JSON reference thereto. 
             * **oas2** (type: OAS2 Context Object) - Specifies usage in OAS2 context. 
-                * **usage** - specifies whether usage is PROHIBITED, UNRESTRICTED, or RESTRICTED to set of object types, to be specified in the 'objectTypes' property. 
+                * **usage** - specifies allowed usage as one of the following:
+                    - `prohibited` - may not be used in oas2.
+                    - `unrestricted` - may be used in any oas2 object that allows specification extension properties. 
+                    - `restricted` - may be used only in objects of the types types be specified in the 'objectTypes' property.
                 * **objectTypes** (value: array of OAS2ObjectTypeName enum) - A list of OAS2 object types in which the extension property may be used. Valid only if 'usage' is RESTRICTED. 
             * **oas3** (type: OAS3 Context Object) - Specifies usage in OAS3 context. 
-                * **usage** - specifies whether usage is PROHIBITED, UNRESTRICTED, or RESTRICTED to set of object types, to be specified in the 'objectTypes' property. 
+                * **usage** - specifies allowed usage as one of the following:
+                    - `prohibited` - may not be used in oas3.
+                    - `unrestricted` - may be used in any oas3 object that allows specification extension properties. 
+                    - `restricted` - may be used only in objects of the types types be specified in the 'objectTypes' property.
                 * **objectTypes** (value: array of OAS3ObjectTypeName enum) - A list of OAS3 object types in which the extension property may be used. Valid only if 'usage' is RESTRICTED. 
     * **components** (type: Components Object) - collections of reusable components. 
         * **schemas** (type: Schemas Object) - catalog of reusable Schema Objects. 
