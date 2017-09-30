@@ -27,11 +27,12 @@ SEMOASA aims to meet the following goals, to the extent practical:
 * **Common Technology Stack with OpenAPI**, so that essential functions like YAML editing, schema validation, and JSON references can be performed by the same components used with OpenAPI tool implementations. 
 * **Support for OpenAPI 2.0 and later**, to ensure relevancy with current and future usage.
 * **Provider-Neutrality**, not being significantly influenced by a particular set of tools or OpenAPI specification extension providers.
+* **Extension Identity**, allowing consumers to disambiguate duplicate names. Since extension providers are not required to register unique property names in a central location, name clashes can occur. To meet this requirement, SEMOASA introduces _namespace_ to define a set of extension properties under coordinated management.
 
 ## Structure
 
 * **Extensions Object** - an object defining one or more extensions, organized by namespace. 
-    * **openapiExtensionFormat** - specifies a version string indicating the format used to describe the extensions. Allows tools to support multiple versions of specification extensions. Each revision of the specification will prescribe a specific version to use. Should adhere to semantic versioning, allowing tools to support a given major or minor version. 
+    * **openapiExtensionFormat** - a version string indicating the format used to describe the extensions. Allows tools to support multiple versions of specification extensions. Each revision of the specification will prescribe a specific version to use. Should adhere to semantic versioning, allowing tools to support a given major or minor version. 
     * **\[namespace\]** (patterned field, type: Namespace Object or reference) - a namespace encompassing a set of managed Specification Extensions. Within a given namespace, management of Specification Extensions is expected to be quasi-coordinated, at least to the extent of ensuring unique extension names. As a convention, namespaces should generally use reverse-DNS notation, with additional segments as needed, e.g. `com.adobe.experience.public`. (Pattern for this set of properties can enforce that convention, and thus exclude statically defined properties like openapiExtensionFormat.) May contain a set of Extension Descriptors, or a JSON Reference to a Namespace Object, to support the _Directory Catalog_ use case.
         * **\[extensionPropertyName\]** (patterned field, type: Extension Object or reference)- name of the specification extension property. must start with "x-" as per the OAS specification. We may want to support wildcards or template parameters in the name. May contain an Extension Object or a JSON Reference thereto, supporting the _Directory Catalog_ use case (one level deeper than namespace). 
             * **summary** - a plain-text summary of the purpose of the extension. 
@@ -59,3 +60,8 @@ SEMOASA aims to meet the following goals, to the extent practical:
             * **\[documentName\]** (patterned field, type: Schema Object) - addressable object name.
 
 ## Examples
+
+Here's an example 
+
+```
+
