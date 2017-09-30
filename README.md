@@ -71,7 +71,7 @@ SEMOASA aims to meet the following goals, to the extent practical:
 
 Here's an example 
 
-```
+```yaml
 openapiExtensionFormat: 0.1.0
 com.amazon.aws:
   x-amazon-apigateway-integration:
