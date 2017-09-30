@@ -1,6 +1,6 @@
 # SEMOA - Specification Extension Metadata for OpenAPI (DRAFT)
 ## Overview
-The OpenAPI Specification, formerly known as the Swagger Specification, is a standard, machine-readable format for REST-style API definitions and documentation. Swagger 2.0 introduced _vendor extensions_, which allow certain objects to have properties named with an `x-` prefix, and with arbitrary or independently specified proeprty values. Vendor extensions were later renamed to [specification extensions](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions) in OpenAPI 2.0 and 3.0.
+The OpenAPI Specification, formerly known as the Swagger Specification, is a standard, machine-readable format for REST-style API definitions and documentation. Swagger 2.0 introduced _vendor extensions_, which allow certain objects to have properties named with an `x-` prefix, with arbitrary or independently specified property values. Vendor extensions were later renamed to [specification extensions](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions) in OpenAPI 2.0 and 3.0.
 
 While specification extensions are widely used, there is no standardized way to define their syntax, expected values, and allowed usage context. This makes it much more difficult for OpenAPI tools to support specification extensions with content assist, validation, and other features that those tools typically provide for standard OpenAPI language constructs. 
 
