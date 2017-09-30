@@ -24,7 +24,7 @@ SEMOASA is designed with a few representative use cases in mind:
 ## Design Goals
 SEMOASA aims to meet the following goals, to the extent practical:
 * **Consistency with OpenAPI**, so developers familiar with current OpenAPI concepts, terminology and style will be familiar with corresponding elements of SEMOASA.
-* **Common Technology Stack with OpenAPI**, so that essential functions like YAML editing, schema validation, and JSON references can be performed by the same components used with OpenAPI tool implementations. 
+* **Common Technology Stack with OpenAPI**, so that essential functions like YAML editing, schema validation, and JSON reference resolution can be performed by the same components used with OpenAPI tool implementations. 
 * **Support for OpenAPI 2.0 and later**, to ensure relevancy with current and future usage.
 * **Provider-Neutrality**, not being significantly influenced by a particular set of tools or OpenAPI specification extension providers.
 * **Extension Identity**, allowing consumers to disambiguate duplicate names. Since extension providers are not required to register unique property names in a central location, name clashes can occur. To meet this requirement, SEMOASA introduces _namespace_ to define a set of extension properties under coordinated management.
