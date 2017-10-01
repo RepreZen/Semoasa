@@ -40,6 +40,8 @@ SEMOASA aims to meet the following goals, to the extent practical:
 
 ## Structure
 
+Once the SEMOASA format gets some traction and achieves a level of stability, we'll write a formal specification. For now, this outline format summarizes the structure of a SEMOASA document:
+
 * **Extensions Object** - an object defining one or more extensions, organized by namespace. 
     * **openapiExtensionFormat** - a version string indicating the format used to describe the extensions. Allows tools to support multiple versions of specification extensions. Each revision of the specification will prescribe a specific version to use. Should adhere to semantic versioning, allowing tools to support a given major or minor version. 
     * **\[namespace\]** (patterned field, type: Namespace Object or reference) - a namespace encompassing a set of managed Specification Extensions. Within a given namespace, management of Specification Extensions is expected to be quasi-coordinated, at least to the extent of ensuring unique extension names. As a convention, namespaces should generally use reverse-DNS notation, with additional segments as needed, e.g. `com.adobe.experience.public`. (Pattern for this set of properties can enforce that convention, and thus exclude statically defined properties like openapiExtensionFormat.) May contain a set of Extension Descriptors, or a JSON Reference to a Namespace Object, to support the _Directory Catalog_ use case.
@@ -76,7 +78,7 @@ SEMOASA aims to meet the following goals, to the extent practical:
 
 ## Examples
 
-Here's an example 
+Here's a starting example:
 
 ```yaml
 openapiExtensionFormat: 0.1.0
