@@ -134,3 +134,13 @@ com.amazon.aws:
       objectTypes:
       - OperationObject
 ```
+
+## Implementations 
+
+Coming soon!
+
+## Contributing to SEMOASA
+
+Please comment! This is an early DRAFT specification. We need input from OAS tool providers, extension providers, the OpenAPI TDC, and other interested parties.
+
+Please review the [open issues], feel free to comment on these, and open new issues.
