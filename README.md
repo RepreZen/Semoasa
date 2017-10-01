@@ -139,7 +139,7 @@ com.amazon.aws:
 
 ## Implementations 
 
-Coming soon!
+Coming soon, pending review and adoption of the specification by tool providers.
 
 ## Contributing to SEMOASA
 
