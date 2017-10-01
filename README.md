@@ -145,4 +145,4 @@ Coming soon!
 
 Please comment! This is an early DRAFT specification. We need input from OAS tool providers, extension providers, the OpenAPI TDC, and other interested parties.
 
-Please review the [open issues], feel free to comment on these, and open new issues.
+Please review the [open issues](https://github.com/RepreZen/SEMOASA/issues), feel free to comment on these, and open new issues.
