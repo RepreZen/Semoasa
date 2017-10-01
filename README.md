@@ -17,7 +17,7 @@ SEMOASA is a machine-readable format for specification extensions that provides 
 SEMOSA use cases involve interactions among systems or system implementors in different roles:
 * The _extension provider_ (or simply _provider_) defines one or more specification extension properties, and usually provides software that uses these properties. The provider may be a vendor, an open source software project, or a standards body (formal or informal). In this scenario, the provider may specify a URL as a _canonical source location_ to access the SEMOASA document.
 * The _publisher_ exposes a SEMOASA document describing a single specification extension property or a _catalog_ of extension properties. The publisher may be an extension provider, publishing its own extension properties in a SEMOASA document. Or it may be a _registry_, publishing a catalog of third-party extensions. 
-* The _consumer_ is a software program that reads a SEMOASA document, and makes uses the specification metadata. Consumers may be OpenAPI editors, validators, code generators, automated build tools, middleware integration modules, or other processors that work with OpenAPI documents.
+* The _consumer_ is a software program that reads a SEMOASA document, and makes use of the specification metadata. Consumers may be OpenAPI editors, validators, code generators, automated build tools, middleware integration modules, or other processors that work with OpenAPI documents.
 
 ### **Catalog Patterns** 
 Publishers and consumers may want to exchange catalogs in different forms:
