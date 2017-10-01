@@ -35,7 +35,7 @@ SEMOASA aims to meet the following goals, to the extent practical:
 * **Consistency with OpenAPI**, so developers familiar with current OpenAPI concepts, terminology and style will be familiar with corresponding elements of SEMOASA.
 * **Common Technology Stack with OpenAPI**, so that essential functions like YAML editing, schema validation, and JSON reference resolution can be performed by the same components used with OpenAPI tool implementations. 
 * **Support for OpenAPI 2.0 and later**, to ensure relevancy with current and future usage.
-* **Provider-Neutrality**, not being significantly influenced by a particular set of tools or OpenAPI specification extension providers.
+* **Provider-Neutrality**, being driven by the community, and not being unduly influenced by a particular set of tools or OpenAPI specification extension providers.
 * **Extension Identity**, allowing consumers to disambiguate duplicate names. Consumers may import extension metadata from multiple publishers, with overlapping catalogs. Since extension providers are not required to reserve unique property names in a central registry, name clashes can occur. To meet the identity requirement, SEMOASA introduces _namespace_ to define a set of extension properties under coordinated management.
 
 ## Structure
