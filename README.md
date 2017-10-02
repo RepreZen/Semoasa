@@ -1,6 +1,6 @@
 # SEMOASA - Specification Extension Metadata for OAS Applications (DRAFT)
 
-<p align="center"><img src="https://raw.githubusercontent.com/RepreZen/SEMOASA/master/etc/img/OAS-Extensions.png" width="600"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/RepreZen/SEMOASA/master/etc/img/OAS-Extensions.png" width="500"/></p>
 
 ## Background
 The OpenAPI Specification, formerly known as the Swagger Specification, is a standard, machine-readable format for REST-style API definitions and documentation. Swagger 2.0 introduced _vendor extensions_, which allow certain objects to have properties named with an `x-` prefix, with arbitrary or independently specified property values. Vendor extensions were later renamed to [specification extensions](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions) in OpenAPI 2.0 and 3.0.
