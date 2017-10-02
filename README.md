@@ -141,6 +141,11 @@ com.amazon.aws:
 
 Coming soon, pending review and adoption of the specification by tool providers.
 
+## Resources
+* [Specification extensions in OAS 3.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions)
+* [Mermade's usage analysis of specification extensions](https://github.com/Mermade/openapi-specification-extensions)
+* [Blog Post: Pluggable Extensions to the OpenAPI Specification Language](https://www.reprezen.com/blog/pluggable-extensions-to-the-openapi-specification-language)
+
 ## Contributing to SEMOASA
 
 Please comment! This is an early DRAFT specification. We need input from OAS tool providers, extension providers, the OpenAPI TDC, and other interested parties.
