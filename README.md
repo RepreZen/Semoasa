@@ -1,6 +1,6 @@
-# SEMOASA - Specification Extension Metadata for OAS Applications (DRAFT)
+# Semoasa - Specification Extension Metadata for OAS Annotations (DRAFT)
 
-<p align="center"><img src="https://raw.githubusercontent.com/RepreZen/SEMOASA/master/etc/img/OAS-Extensions.png" width="500"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/RepreZen/Semoasa/master/etc/img/OAS-Extensions.png" width="500"/></p>
 
 ## Background
 The OpenAPI Specification, formerly known as the Swagger Specification, is a standard, machine-readable format for REST-style API definitions and documentation. Swagger 2.0 introduced _vendor extensions_, which allow certain objects to have properties named with an `x-` prefix, with arbitrary or independently specified property values. Vendor extensions were later renamed to [specification extensions](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions) in OpenAPI 2.0 and 3.0.
@@ -11,16 +11,16 @@ While specification extensions are [widely used](https://github.com/Mermade/open
 
 For example, an OpenAPI editor will usually have design-time knowledge of the OpenAPI specification, and _may_ make use of a JSON Schema that encodes some of this knowledge. Based on this knowledge, it can provide context-sensitive editing assistance and validation. But if the user adds extended properties with the `x-` prefix, the trail goes cold. Unless the editor has been designed with explicit prior knowledge of that specification extension, it can't tell the user what the extended property means, what kinds of values are expected, and whether that extension is even meaningful in this context. 
 
-SEMOASA is a machine-readable format for specification extensions that provides a base level of structural and descriptive information, along with optional links to external resources for human-readable documentation. Like OpenAPI itself, specification extensions may have certain constraints and semantics that aren't captured in a schema or metadata descriptor; but the information carried in SEMOASA is sufficient to allow OpenAPI tools to provide a user experience much closer to what they provide for standard OpenAPI syntax.
+Semoasa is a machine-readable format for specification extensions that provides a base level of structural and descriptive information, along with optional links to external resources for human-readable documentation. Like OpenAPI itself, specification extensions may have certain constraints and semantics that aren't captured in a schema or metadata descriptor; but the information carried in Semoasa is sufficient to allow OpenAPI tools to provide a user experience much closer to what they provide for standard OpenAPI syntax.
 
 ## Use Cases
 
 ### Roles
 
-SEMOASA use cases involve interactions among systems or system implementors in different roles:
-* The _extension provider_ (or simply _provider_) defines one or more specification extension properties, and usually provides software that uses these properties. The provider may be a vendor, an open source software project, or a standards body (formal or informal). In this scenario, the provider may specify a URL as a _canonical source location_ to access the SEMOASA document.
-* The _publisher_ exposes a SEMOASA document describing a single specification extension property or a _catalog_ of extension properties. The publisher may be an extension provider, publishing its own extension properties in a SEMOASA document. Or it may be a _registry_, publishing a catalog of third-party extensions. 
-* The _consumer_ is a software program that reads a SEMOASA document, and makes use of the specification metadata. Consumers may be OpenAPI editors, validators, code generators, automated build tools, middleware integration modules, or other processors that work with OpenAPI documents.
+Semoasa use cases involve interactions among systems or system implementors in different roles:
+* The _extension provider_ (or simply _provider_) defines one or more specification extension properties, and usually provides software that uses these properties. The provider may be a vendor, an open source software project, or a standards body (formal or informal). In this scenario, the provider may specify a URL as a _canonical source location_ to access the Semoasa document.
+* The _publisher_ exposes a Semoasa document describing a single specification extension property or a _catalog_ of extension properties. The publisher may be an extension provider, publishing its own extension properties in a Semoasa document. Or it may be a _registry_, publishing a catalog of third-party extensions. 
+* The _consumer_ is a software program that reads a Semoasa document, and makes use of the specification metadata. Consumers may be OpenAPI editors, validators, code generators, automated build tools, middleware integration modules, or other processors that work with OpenAPI documents.
 
 ### **Catalog Patterns** 
 Publishers and consumers may want to exchange catalogs in different forms:
@@ -28,22 +28,22 @@ Publishers and consumers may want to exchange catalogs in different forms:
 * *Aggregation Catalog* - A publisher may provide a collection of known OpenAPI specification extensions, including the full extension metadata. This allows a consumer to ingest a full set of metadata without requiring additional round trips. In this case, it should still be possible to include the canonical location, so the consumer can refresh these definitions as needed.  
 
 ### **Tool Functions**
-SEMOASA is designed with a few representative use cases in mind
+Semoasa is designed with a few representative use cases in mind
 * *Content Assist* - Providing in-place code assist, or "Intellisense", including proposals for specification extension properties intended for use in the current context. 
 * *Tool Tips* - Extension property descriptions and/or formatted documentation, visible when hovering over an actual or proposed usage of the extension property. 
 * *Validation* - Checking usage of extension properties against the provided extension descriptor, flagging errors or warnings where an extended property appears in an unexpected context, or has a value that does not conform to the specified schema. 
 
 ## Design Goals
-SEMOASA aims to meet the following goals, to the extent practical:
-* **Consistency with OpenAPI**, so developers familiar with current OpenAPI concepts, terminology and style will be familiar with corresponding elements of SEMOASA.
+Semoasa aims to meet the following goals, to the extent practical:
+* **Consistency with OpenAPI**, so developers familiar with current OpenAPI concepts, terminology and style will be familiar with corresponding elements of Semoasa.
 * **Common Technology Stack with OpenAPI**, so that essential functions like YAML editing, schema validation, and JSON reference resolution can be performed by the same components used with OpenAPI tool implementations. 
 * **Support for OpenAPI 2.0 and later**, to ensure relevancy with current and future usage.
 * **Provider-Neutrality**, being driven by the community, and not being unduly influenced by a particular set of tools or OpenAPI specification extension providers.
-* **Extension Identity**, allowing consumers to disambiguate duplicate names. Consumers may import extension metadata from multiple publishers, with overlapping catalogs. Since extension providers are not required to reserve unique property names in a central registry, name clashes can occur. To meet the identity requirement, SEMOASA introduces _namespace_ to define a set of extension properties under coordinated management.
+* **Extension Identity**, allowing consumers to disambiguate duplicate names. Consumers may import extension metadata from multiple publishers, with overlapping catalogs. Since extension providers are not required to reserve unique property names in a central registry, name clashes can occur. To meet the identity requirement, Semoasa introduces _namespace_ to define a set of extension properties under coordinated management.
 
 ## Structure
 
-Once the SEMOASA format gets some traction and achieves a level of stability, we'll write a formal specification. For now, this outline format summarizes the structure of a SEMOASA document:
+Once the Semoasa format gets some traction and achieves a level of stability, we'll write a formal specification. For now, this outline format summarizes the structure of a Semoasa document:
 
 * **Extensions Object** - an object defining one or more extensions, organized by namespace. 
     * **openapiExtensionFormat** - a version string indicating the format used to describe the extensions. Allows tools to support multiple versions of specification extensions. Each revision of the specification will prescribe a specific version to use. Should adhere to semantic versioning, allowing tools to support a given major or minor version. 
@@ -148,15 +148,15 @@ Further implementations coming soon, pending review and adoption of the specific
 
 |Project|Description|Language|Website/Example|
 |---|---|---|---|
-|[widdershins](https://github.com/Mermade/widdershins)|OpenApi / Swagger, AsyncApi & SEMOASA definition to Slate / Shins compatible markdown|Node.js|[APIs.guru extension documentation](https://mermade.github.io/shins/apisguru.html)
+|[widdershins](https://github.com/Mermade/widdershins)|OpenApi / Swagger, AsyncApi & Semoasa definition to Slate / Shins compatible markdown|Node.js|[APIs.guru extension documentation](https://mermade.github.io/shins/apisguru.html)
 
 ## Resources
 * [Specification extensions in OAS 3.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions)
 * [Mermade's usage analysis of specification extensions](https://github.com/Mermade/openapi-specification-extensions)
 * [Blog Post: Pluggable Extensions to the OpenAPI Specification Language](https://www.reprezen.com/blog/pluggable-extensions-to-the-openapi-specification-language)
 
-## Contributing to SEMOASA
+## Contributing to Semoasa
 
 Please comment! This is an early DRAFT specification. We need input from OAS tool providers, extension providers, the OpenAPI TDC, and other interested parties.
 
-Please review the [open issues](https://github.com/RepreZen/SEMOASA/issues), feel free to comment on these, and open new issues.
+Please review the [open issues](https://github.com/RepreZen/Semoasa/issues), feel free to comment on these, and open new issues.
