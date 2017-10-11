@@ -104,32 +104,33 @@ com.amazon.aws:
       properties:
         cacheKeyParameters:
           type: array
-          items: string
+          items:
+            type: string
           description: A list of request parameters whose values are to be cached.
-      cacheNamespace:
-        type: string
-        description: An API-specific tag group of related cached parameters.
-      credentials:
-        type: string  
-        description: |
-          For AWS IAM role-based credentials, specify the ARN of an appropriate IAM role. 
-          If unspecified, credentials will default to resource-based permissions that must
-          be added manually to allow the API to access the resource. For more information,
-          see Granting Permissions Using a Resource Policy. 
-      contentHandling: 
-        type: string
-        description: |
-          Request payload encoding conversion types. Valid values are 
-          1) CONVERT_TO_TEXT, for converting a binary payload into a Base64-encoded string 
-          or converting a text payload into a utf-8-encoded string or passing through the 
-          text payload natively without modification, and 
-          2) CONVERT_TO_BINARY, for converting a text payload into Base64-decoded blob or 
-          passing through a binary payload natively without modification.
-      httpMethod:
-        type:  string
-        description: |
-          The HTTP method used in the integration request. For Lambda function invocations, 
-          the value must be POST.
+        cacheNamespace:
+          type: string
+          description: An API-specific tag group of related cached parameters.
+        credentials:
+          type: string  
+          description: |
+            For AWS IAM role-based credentials, specify the ARN of an appropriate IAM role. 
+            If unspecified, credentials will default to resource-based permissions that must
+            be added manually to allow the API to access the resource. For more information,
+            see Granting Permissions Using a Resource Policy. 
+        contentHandling: 
+          type: string
+          description: |
+            Request payload encoding conversion types. Valid values are 
+            1) CONVERT_TO_TEXT, for converting a binary payload into a Base64-encoded string 
+            or converting a text payload into a utf-8-encoded string or passing through the 
+            text payload natively without modification, and 
+            2) CONVERT_TO_BINARY, for converting a text payload into Base64-decoded blob or 
+            passing through a binary payload natively without modification.
+        httpMethod:
+          type:  string
+          description: |
+            The HTTP method used in the integration request. For Lambda function invocations, 
+            the value must be POST.
       #... (other properties)
     oas2:
       usage: restricted
