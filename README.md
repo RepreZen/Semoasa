@@ -59,6 +59,7 @@ Once the SEMOASA format gets some traction and achieves a level of stability, we
                 * **name** - name 
                 * **(other)** - other properties, TBD 
             * **schema** (type: Schema Object or reference) - an OAS 3.0-compliant Schema Object describing the expected value of the extension property. May be specified inline, or may be a JSON reference thereto. 
+            * **example** (type: any or reference) - an example of the value of the extension property, for documentation purposes.
             * **oas2** (type: OAS2 Context Object) - Specifies usage in OAS2 context. 
                 * **usage** - specifies allowed usage as one of the following:
                     - `prohibited` - may not be used in oas2.
@@ -78,6 +79,8 @@ Once the SEMOASA format gets some traction and achieves a level of stability, we
             * **\[providerName\]** (patterned field, type: Schema Object) - addressable object name. 
         * **externalDocs** (type: External Docs Object) - catalog of reusable External Documentation Objects. 
             * **\[documentName\]** (patterned field, type: Schema Object) - addressable object name.
+        * **examples** (type: Examples Object) - catalog of reusable examples.
+            * **\[exampleName\]** (patterned field, type: any) - addressable object name.
 
 ## Examples
 
