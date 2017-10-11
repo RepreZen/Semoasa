@@ -143,7 +143,11 @@ com.amazon.aws:
 
 ## Implementations 
 
-Coming soon, pending review and adoption of the specification by tool providers.
+Further implementations coming soon, pending review and adoption of the specification by tool providers.
+
+|Project|Description|Language|Website/Example|
+|---|---|---|---|
+|[widdershins](https://github.com/Mermade/widdershins)|OpenApi / Swagger, AsyncApi & SEMOASA definition to Slate / Shins compatible markdown|Node.js|[APIs.guru extension documentation](https://mermade.github.io/shins/apisguru.html)
 
 ## Resources
 * [Specification extensions in OAS 3.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#specificationExtensions)
