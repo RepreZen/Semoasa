@@ -131,7 +131,7 @@ com.amazon.aws:
           description: |
             The HTTP method used in the integration request. For Lambda function invocations, 
             the value must be POST.
-      #... (other properties)
+        #... (other properties)
     oas2:
       usage: restricted
       objectTypes:
