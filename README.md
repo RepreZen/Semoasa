@@ -51,6 +51,7 @@ Once the SEMOASA format gets some traction and achieves a level of stability, we
         * **\[extensionPropertyName\]** (patterned field, type: Extension Object or reference)- name of the specification extension property. must start with "x-" as per the OAS specification. We may want to support wildcards or template parameters in the name. May contain an Extension Object or a JSON Reference thereto, supporting the _Directory Catalog_ use case (one level deeper than namespace). 
             * **summary** - a plain-text summary of the purpose of the extension. 
             * **description** - markdown documentation describing the extension. 
+            * **deprecated** - a Boolean to indicate whether this extension is deprecated and should no longer be used.
             * **externalDocs** (type: External Document Object or reference) - points to an external human-readable specification. May be specified inline, or may be a JSON reference to an ExternalDocumentation object defined in the same document (usually in a designated components location), or an external document. 
                 * **description** - markdown description of the external documentation resource. 
                 * **url** - URL resolving to the external documentation resource. 
