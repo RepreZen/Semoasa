@@ -64,13 +64,13 @@ Once the Semoasa format gets some traction and achieves a level of stability, we
                 * **usage** - specifies allowed usage as one of the following:
                     - `prohibited` - may not be used in oas2.
                     - `unrestricted` - may be used in any oas2 object that allows specification extension properties. 
-                    - `restricted` - may be used only in objects of the types types be specified in the 'objectTypes' property.
+                    - `restricted` - may be used only in objects of the types specified in the 'objectTypes' property.
                 * **objectTypes** (value: array of OAS2ObjectTypeName enum) - A list of OAS2 object types in which the extension property may be used. Valid only if 'usage' is RESTRICTED. 
             * **oas3** (type: OAS3 Context Object) - Specifies usage in OAS3 context. 
                 * **usage** - specifies allowed usage as one of the following:
                     - `prohibited` - may not be used in oas3.
                     - `unrestricted` - may be used in any oas3 object that allows specification extension properties. 
-                    - `restricted` - may be used only in objects of the types types be specified in the 'objectTypes' property.
+                    - `restricted` - may be used only in objects of the types specified in the 'objectTypes' property.
                 * **objectTypes** (value: array of OAS3ObjectTypeName enum) - A list of OAS3 object types in which the extension property may be used. Valid only if 'usage' is RESTRICTED. 
     * **components** (type: Components Object) - collections of reusable components. 
         * **schemas** (type: Schemas Object) - catalog of reusable Schema Objects. 
